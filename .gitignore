@@ -1,49 +1,76 @@
-# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# For more info: https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# compiled output
-dist
-tmp
-out-tsc
+# ============================================================================
+# BUILD & COMPILED OUTPUT
+# ============================================================================
+dist/
+tmp/
+out-tsc/
 *.tsbuildinfo
-.expo
-.expo-shared
+.expo/
+.expo-shared/
 
-# dependencies
-node_modules
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
 
-# IDEs and editors
-/.idea
+# ============================================================================
+# IDE & EDITOR CONFIGURATIONS
+# ============================================================================
+# IntelliJ/WebStorm
+.idea/
 .project
 .classpath
+
+# Cloud9
 .c9/
+
+# General editors
 *.launch
 .settings/
 *.sublime-workspace
 
-# IDE - VSCode
+# VSCode - keep settings and configs
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+# Cursor specific
+.cursor/rules/
 
-# System Files
+# ============================================================================
+# LOGS & DEBUG
+# ============================================================================
+npm-debug.log*
+yarn-error.log*
+testem.log
+
+# Coverage reports
+/coverage
+
+# ============================================================================
+# BUILD & MISC FILES
+# ============================================================================
+/.sass-cache/
+/connect.lock
+/libpeerconnection.log
+/typings/
+
+# ============================================================================
+# SYSTEM & OS SPECIFIC
+# ============================================================================
 .DS_Store
 Thumbs.db
 
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md
-
+# ============================================================================
+# ENVIRONMENT & BUILD TOOLS
+# ============================================================================
 # Replit
 .cache/
 .local/
+
+# GitHub
+.github/instructions/
