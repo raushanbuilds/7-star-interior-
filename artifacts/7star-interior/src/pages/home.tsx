@@ -31,8 +31,8 @@ import blog1 from "@/assets/images/blog-1.jpg";
 import blog2 from "@/assets/images/blog-2.jpg";
 import blog3 from "@/assets/images/blog-3.jpg";
 
-const WHATSAPP_NUMBER = "919000000000"; // Placeholder, replace with actual
-const PHONE_NUMBER = "+919000000000"; // Placeholder, replace with actual
+const WHATSAPP_NUMBER = "919297766777";
+const PHONE_NUMBER = "+919297766777";
 const ADDRESS = "372, SMT LALMUNI DEVI, RAJDEO SINGH, Devi Asthan Rd, Jaganpura, EAST R, K NAGAR, Patna, Bihar 800027";
 
 export default function Home() {
