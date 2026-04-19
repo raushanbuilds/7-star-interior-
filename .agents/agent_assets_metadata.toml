@@ -1,0 +1,121 @@
+uploads = []
+
+[[generated]]
+id = "Yt3WZJG_bNN7kiKDepKEb"
+uri = "file://artifacts/7star-interior/src/assets/images/hero.png"
+type = "image"
+title = "Luxurious living room interior"
+
+[[generated]]
+id = "584c8gbiGaafxDVcHGIH6"
+uri = "file://artifacts/7star-interior/src/assets/images/service-residential.png"
+type = "image"
+title = "Premium residential interior design"
+
+[[generated]]
+id = "g8-Q2DWK6zWbsZhn4fnx8"
+uri = "file://artifacts/7star-interior/src/assets/images/service-kitchen.png"
+type = "image"
+title = "Luxury modular kitchen"
+
+[[generated]]
+id = "zPwjLlfo4Lvi-py5imJhA"
+uri = "file://artifacts/7star-interior/src/assets/images/service-office.png"
+type = "image"
+title = "Modern corporate office interior"
+
+[[generated]]
+id = "ANSGQC7FOaS2E1SgrPTcj"
+uri = "file://artifacts/7star-interior/src/assets/images/service-renovation.png"
+type = "image"
+title = "Home renovation process"
+
+[[generated]]
+id = "A0KpFOA16Y8o4lIklzG6A"
+uri = "file://artifacts/7star-interior/src/assets/images/service-turnkey.png"
+type = "image"
+title = "Turnkey interior project"
+
+[[generated]]
+id = "FE_l7bA3GcVMFy2NzCQIn"
+uri = "file://artifacts/7star-interior/src/assets/images/service-3d.png"
+type = "image"
+title = "3D interior visualization"
+
+[[generated]]
+id = "G25MIPBTcGi-GL9c4ya2s"
+uri = "file://artifacts/7star-interior/src/assets/images/portfolio-1.png"
+type = "image"
+title = "Luxury living room portfolio"
+
+[[generated]]
+id = "7xaE6AtKRbPO1TNy0FHnp"
+uri = "file://artifacts/7star-interior/src/assets/images/portfolio-2.png"
+type = "image"
+title = "Luxury bedroom portfolio"
+
+[[generated]]
+id = "fs8uWqCKU9nq_yUU6zZtO"
+uri = "file://artifacts/7star-interior/src/assets/images/portfolio-3.png"
+type = "image"
+title = "Premium kitchen portfolio"
+
+[[outputs]]
+id = "evPUZaifpjCC3WYc2F1Yb"
+uri = "file://artifacts/7star-interior/src/assets/images/portfolio-4.jpg"
+type = "image"
+title = "luxury corporate office interior"
+
+[[outputs]]
+id = "RLSHIUb2oM90DFeVawXcP"
+uri = "file://artifacts/7star-interior/src/assets/images/portfolio-5.jpg"
+type = "image"
+title = "luxury dining room interior"
+
+[[outputs]]
+id = "jfjWaPOEEx_vqoe0Zo1yt"
+uri = "file://artifacts/7star-interior/src/assets/images/portfolio-6.jpg"
+type = "image"
+title = "luxury bathroom interior"
+
+[[outputs]]
+id = "x4q8Su9dK-BRnFC5BtZwd"
+uri = "file://artifacts/7star-interior/src/assets/images/before-1.jpg"
+type = "image"
+title = "plain empty living room"
+
+[[outputs]]
+id = "b0-2b_h6HCzxu1bY_vpBh"
+uri = "file://artifacts/7star-interior/src/assets/images/after-1.jpg"
+type = "image"
+title = "luxury beautifully designed living room"
+
+[[outputs]]
+id = "wCdMP7Gc1sXYiaQSzU72m"
+uri = "file://artifacts/7star-interior/src/assets/images/before-2.jpg"
+type = "image"
+title = "old outdated kitchen"
+
+[[outputs]]
+id = "uohP1MEnLQ7qL9nOR2OlW"
+uri = "file://artifacts/7star-interior/src/assets/images/after-2.jpg"
+type = "image"
+title = "modern luxury modular kitchen"
+
+[[outputs]]
+id = "Em0ZvDc143EkR0JdwBdqa"
+uri = "file://artifacts/7star-interior/src/assets/images/blog-1.jpg"
+type = "image"
+title = "clever space saving interior design small apartment"
+
+[[outputs]]
+id = "dOD0Cv9GLtz1gWtZwwIML"
+uri = "file://artifacts/7star-interior/src/assets/images/blog-2.jpg"
+type = "image"
+title = "modern kitchen trends luxury design"
+
+[[outputs]]
+id = "mwhOZ_l-1qKIPaOIpBxWd"
+uri = "file://artifacts/7star-interior/src/assets/images/blog-3.jpg"
+type = "image"
+title = "beautifully styled living room corner luxury interior"
