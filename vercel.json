@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install",
+  "outputDirectory": "artifacts/7star-interior/dist",
+  "rootDirectory": "artifacts/7star-interior",
+  "env": {
+    "PORT": "3000"
+  }
+}
