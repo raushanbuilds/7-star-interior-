@@ -34,53 +34,53 @@
     {
       "title": "Residential Interior",
       "description": "Complete home interiors that reflect your personal style and enhance comfort.",
-      "image": "assets/images/services/service-residential.png"
+      "image": "assets/images/service-residential.png"
     },
     {
       "title": "Modular Kitchen",
       "description": "Smart, ergonomic, and stylish kitchen designs that make cooking a joy.",
-      "image": "assets/images/services/service-kitchen.png"
+      "image": "assets/images/service-kitchen.png"
     },
     {
       "title": "Office Interior",
       "description": "Inspiring workspaces designed to boost productivity and reflect your brand.",
-      "image": "assets/images/services/service-office.png"
+      "image": "assets/images/service-office.png"
     },
     {
       "title": "Home Renovation",
       "description": "Breathe new life into your existing spaces with our expert remodeling.",
-      "image": "assets/images/services/service-renovation.png"
+      "image": "assets/images/service-renovation.png"
     },
     {
       "title": "Turnkey Projects",
       "description": "End-to-end execution. You hand us the keys, we hand you a finished home.",
-      "image": "assets/images/services/service-turnkey.png"
+      "image": "assets/images/service-turnkey.png"
     },
     {
       "title": "3D Visualization",
       "description": "See your space before it's built with our highly realistic 3D renderings.",
-      "image": "assets/images/services/service-3d.png"
+      "image": "assets/images/service-3d.png"
     }
   ],
 
   "portfolio": [
-    { "title": "Luxury Villa, Kankarbagh", "category": "Residential", "image": "assets/images/portfolio/portfolio-1.png" },
-    { "title": "Master Bedroom", "category": "Bedroom", "image": "assets/images/portfolio/portfolio-2.png" },
-    { "title": "Premium Modular Kitchen", "category": "Kitchen", "image": "assets/images/portfolio/portfolio-3.png" },
-    { "title": "Corporate Workspace", "category": "Office", "image": "assets/images/portfolio/portfolio-4.jpg" },
-    { "title": "Elegant Dining Area", "category": "Dining", "image": "assets/images/portfolio/portfolio-5.jpg" }
+    { "title": "Luxury Villa, Kankarbagh", "category": "Residential", "image": "assets/images/portfolio-1.png" },
+    { "title": "Master Bedroom", "category": "Bedroom", "image": "assets/images/portfolio-2.png" },
+    { "title": "Premium Modular Kitchen", "category": "Kitchen", "image": "assets/images/portfolio-3.png" },
+    { "title": "Corporate Workspace", "category": "Office", "image": "assets/images/portfolio-4.jpg" },
+    { "title": "Elegant Dining Area", "category": "Dining", "image": "assets/images/portfolio-5.jpg" }
   ],
 
   "beforeAfter": [
     {
       "title": "Living Room Transformation",
-      "before": "assets/images/before-after/before-1.jpg",
-      "after": "assets/images/before-after/after-1.jpg"
+      "before": "assets/images/before-1.jpg",
+      "after": "assets/images/after-1.jpg"
     },
     {
       "title": "Kitchen Remodel",
-      "before": "assets/images/before-after/before-2.jpg",
-      "after": "assets/images/before-after/after-2.jpg"
+      "before": "assets/images/before-2.jpg",
+      "after": "assets/images/after-2.jpg"
     }
   ],
 
@@ -175,9 +175,9 @@
   ],
 
   "blog": [
-    { "title": "5 Space-Saving Ideas for Small Homes", "date": "Oct 12, 2023", "image": "assets/images/blog/blog-1.jpg" },
-    { "title": "Modular Kitchen Trends 2025", "date": "Oct 28, 2023", "image": "assets/images/blog/blog-2.jpg" },
-    { "title": "How to Choose the Right Interior Style", "date": "Nov 05, 2023", "image": "assets/images/blog/blog-3.jpg" }
+    { "title": "5 Space-Saving Ideas for Small Homes", "date": "Oct 12, 2023", "image": "assets/images/blog-1.jpg" },
+    { "title": "Modular Kitchen Trends 2025", "date": "Oct 28, 2023", "image": "assets/images/blog-2.jpg" },
+    { "title": "How to Choose the Right Interior Style", "date": "Nov 05, 2023", "image": "assets/images/blog-3.jpg" }
   ],
 
   "socialMedia": {
