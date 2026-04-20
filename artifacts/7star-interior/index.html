@@ -1,16 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>7 Star Interior Patna</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>7 Star Interior Patna — Premium Interior Design Studio</title>
+  <meta name="description" content="7 Star Interior is Patna's premier interior design studio. Residential interiors, modular kitchens, office design, turnkey projects. Book your free consultation today." />
+  <meta property="og:title" content="7 Star Interior — Premium Interior Design Studio" />
+  <meta property="og:description" content="Transforming residential and commercial spaces into stunning, functional masterpieces." />
+  <meta property="og:image" content="assets/images/opengraph.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <div class="logo" onclick="scrollToSection('home')">
+        <div class="logo-icon" data-bind="businessShortName">7*</div>
+        <span class="logo-text" data-bind="businessName">7 Star Interior</span>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="desktop-nav">
+        <div class="nav-links">
+          <button onclick="scrollToSection('about')">About</button>
+          <button onclick="scrollToSection('services')">Services</button>
+          <button onclick="scrollToSection('portfolio')">Portfolio</button>
+          <button onclick="scrollToSection('process')">Process</button>
+          <button onclick="scrollToSection('pricing')">Pricing</button>
+        </div>
+        <button class="btn btn-primary btn-rounded" onclick="scrollToSection('contact')" style="padding-left:1.5rem;padding-right:1.5rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
+          Book Free Consultation
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" onclick="toggleMobileMenu()">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg id="close-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button onclick="scrollToSection('about')">About</button>
+      <button onclick="scrollToSection('services')">Services</button>
+      <button onclick="scrollToSection('portfolio')">Portfolio</button>
+      <button onclick="scrollToSection('process')">Process</button>
+      <button onclick="scrollToSection('pricing')">Pricing</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+      <button class="btn btn-primary btn-full" onclick="scrollToSection('contact')" style="margin-top:0.5rem;">
+        Book Free Consultation
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ FLOATING ACTION BUTTONS ═══════════════════ -->
+  <div class="fab-container-right">
+    <a id="fab-whatsapp" href="https://wa.me/919297766777?text=Hi%207%20Star%20Interior,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" class="fab fab-whatsapp" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+  <div class="fab-container-left">
+    <a id="fab-phone" href="tel:+919297766777" class="fab fab-phone" aria-label="Call Us">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+  </div>
+
+  <!-- ═══════════════════ 1. HERO SECTION ═══════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero/hero.png" alt="Luxurious Living Room Interior" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span data-bind="heroBadge">Patna's Premium Interior Studio</span>
+        </div>
+        <h1>Design That <br /><span class="highlight">Elevates</span> Your Lifestyle.</h1>
+        <p class="hero-description" data-bind="heroSubtitle">Transforming residential and commercial spaces into stunning, functional masterpieces. Experience luxury living with 7 Star Interior.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-lg btn-rounded" onclick="scrollToSection('contact')">
+            Book Free Consultation
+          </button>
+          <a id="hero-call-btn" href="tel:+919297766777" class="btn btn-outline-white btn-lg btn-rounded">Call Now</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <p class="stat-number" data-bind="stats.yearsExperience">10+</p>
+            <p class="stat-label">Years Experience</p>
+          </div>
+          <div>
+            <p class="stat-number" data-bind="stats.projectsDelivered">500+</p>
+            <p class="stat-label">Projects Delivered</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 2. ABOUT US ═══════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper fade-in">
+          <div class="about-image">
+            <img src="assets/images/portfolio/portfolio-1.png" alt="About 7 Star Interior" />
+          </div>
+          <div class="about-glow"></div>
+          <div class="about-quality-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Premium Quality</span>
+          </div>
+        </div>
+        <div class="about-text fade-in">
+          <h2 class="section-label" data-bind="about.sectionLabel">About 7 Star Interior</h2>
+          <h3 class="section-heading" data-bind="about.heading">Crafting Spaces With Soul &amp; Purpose</h3>
+          <p class="large" data-bind="about.paragraph1">Based in the heart of Patna, 7 Star Interior is a premier design studio dedicated to transforming ordinary spaces into extraordinary environments. With over a decade of excellence, we bring your vision to life with uncompromising quality.</p>
+          <p data-bind="about.paragraph2">Our philosophy is simple: exceptional design should be both breathtakingly beautiful and perfectly functional. From conceptualization to the final reveal, our expert team manages every detail, ensuring a seamless journey to your dream space.</p>
+          <ul class="about-highlights" id="about-highlights">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              <span>Unmatched attention to detail and craftsmanship</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              <span>Transparent pricing with no hidden costs</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              <span>Dedicated project manager for every client</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              <span>Use of premium, durable materials</span>
+            </li>
+          </ul>
+          <button class="btn btn-outline btn-rounded" onclick="scrollToSection('portfolio')" style="display:inline-flex;">
+            View Our Work
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 3. SERVICES ═══════════════════ -->
+  <section id="services" class="section bg-secondary-section services-bg">
+    <div class="container" style="position:relative;z-index:10;">
+      <div class="section-center">
+        <h2 class="section-label">Our Expertise</h2>
+        <h3 class="section-heading-white">Comprehensive Design Services</h3>
+        <p class="section-subtext-white">From a single room refresh to complete turnkey solutions, we offer a full spectrum of interior design services tailored to your needs.</p>
+      </div>
+      <div class="services-grid stagger-container" id="services-grid">
+        <div class="service-card fade-in-child">
+          <div class="service-card-image"><img src="assets/images/services/service-residential.png" alt="Residential Interior" /></div>
+          <h4>Residential Interior</h4>
+          <p>Complete home interiors that reflect your personal style and enhance comfort.</p>
+        </div>
+        <div class="service-card fade-in-child">
+          <div class="service-card-image"><img src="assets/images/services/service-kitchen.png" alt="Modular Kitchen" /></div>
+          <h4>Modular Kitchen</h4>
+          <p>Smart, ergonomic, and stylish kitchen designs that make cooking a joy.</p>
+        </div>
+        <div class="service-card fade-in-child">
+          <div class="service-card-image"><img src="assets/images/services/service-office.png" alt="Office Interior" /></div>
+          <h4>Office Interior</h4>
+          <p>Inspiring workspaces designed to boost productivity and reflect your brand.</p>
+        </div>
+        <div class="service-card fade-in-child">
+          <div class="service-card-image"><img src="assets/images/services/service-renovation.png" alt="Home Renovation" /></div>
+          <h4>Home Renovation</h4>
+          <p>Breathe new life into your existing spaces with our expert remodeling.</p>
+        </div>
+        <div class="service-card fade-in-child">
+          <div class="service-card-image"><img src="assets/images/services/service-turnkey.png" alt="Turnkey Projects" /></div>
+          <h4>Turnkey Projects</h4>
+          <p>End-to-end execution. You hand us the keys, we hand you a finished home.</p>
+        </div>
+        <div class="service-card fade-in-child">
+          <div class="service-card-image"><img src="assets/images/services/service-3d.png" alt="3D Visualization" /></div>
+          <h4>3D Visualization</h4>
+          <p>See your space before it's built with our highly realistic 3D renderings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 4. PORTFOLIO ═══════════════════ -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <div class="portfolio-header">
+        <div>
+          <h2 class="section-label">Featured Projects</h2>
+          <h3 class="section-heading" style="margin-bottom:0;">Our Masterpieces</h3>
+        </div>
+        <button class="btn btn-ghost">
+          View All Projects
+          <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <div class="portfolio-item portfolio-item-featured">
+          <img src="assets/images/portfolio/portfolio-1.png" alt="Living Room" />
+          <div class="portfolio-item-overlay">
+            <div>
+              <p class="category">Residential</p>
+              <h4>Luxury Villa, Kankarbagh</h4>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/images/portfolio/portfolio-2.png" alt="Bedroom" />
+          <div class="portfolio-item-overlay"><div><h4>Master Bedroom</h4></div></div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/images/portfolio/portfolio-3.png" alt="Kitchen" />
+          <div class="portfolio-item-overlay"><div><h4>Premium Modular Kitchen</h4></div></div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/images/portfolio/portfolio-4.jpg" alt="Office" />
+          <div class="portfolio-item-overlay"><div><h4>Corporate Workspace</h4></div></div>
+        </div>
+        <div class="portfolio-item portfolio-item-wide">
+          <img src="assets/images/portfolio/portfolio-5.jpg" alt="Dining Room" />
+          <div class="portfolio-item-overlay"><div><h4>Elegant Dining Area</h4></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 5. BEFORE & AFTER ═══════════════════ -->
+  <section class="section bg-muted-section">
+    <div class="container">
+      <div class="section-center">
+        <h2 class="section-label">Transformations</h2>
+        <h3 class="section-heading">Before &amp; After</h3>
+        <p class="section-subtext">Witness the dramatic difference our design expertise brings to an empty or outdated space.</p>
+      </div>
+      <div class="ba-grid" id="ba-grid">
+        <div class="ba-pair">
+          <h4>Living Room Transformation</h4>
+          <div class="ba-images">
+            <div class="ba-img">
+              <img src="assets/images/before-after/before-1.jpg" alt="Before" />
+              <div class="ba-label ba-label-before">Before</div>
+            </div>
+            <div class="ba-img">
+              <img src="assets/images/before-after/after-1.jpg" alt="After" />
+              <div class="ba-label ba-label-after">After</div>
+            </div>
+            <div class="ba-vs">VS</div>
+          </div>
+        </div>
+        <div class="ba-pair">
+          <h4>Kitchen Remodel</h4>
+          <div class="ba-images">
+            <div class="ba-img">
+              <img src="assets/images/before-after/before-2.jpg" alt="Before" />
+              <div class="ba-label ba-label-before">Before</div>
+            </div>
+            <div class="ba-img">
+              <img src="assets/images/before-after/after-2.jpg" alt="After" />
+              <div class="ba-label ba-label-after">After</div>
+            </div>
+            <div class="ba-vs">VS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 6. TESTIMONIALS ═══════════════════ -->
+  <section class="section bg-secondary-section">
+    <div class="container">
+      <div class="section-center">
+        <h2 class="section-label">Client Stories</h2>
+        <h3 class="section-heading-white">What Our Clients Say</h3>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+          </div>
+          <p class="testimonial-text">"7 Star Interior completely transformed our 3BHK. Their attention to detail and adherence to timeline was impressive. The modular kitchen is the highlight of our home."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div><p class="name">Rajesh Kumar</p><p class="location">Boring Road</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+          </div>
+          <p class="testimonial-text">"Very professional team. They understood my vision for a modern minimalist living room and executed it perfectly. Highly recommend their services in Patna."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div><p class="name">Anjali Singh</p><p class="location">Patliputra Colony</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+          </div>
+          <p class="testimonial-text">"We hired them for our office interior. The space utilization and aesthetic appeal they achieved within our budget was beyond our expectations."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">V</div>
+            <div><p class="name">Vikash Sharma</p><p class="location">Bailey Road</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+          </div>
+          <p class="testimonial-text">"The 3D visualization helped us understand the design before execution. The final result looks exactly like the render! Excellent craftsmanship."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">N</div>
+            <div><p class="name">Neha Gupta</p><p class="location">Danapur</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
+          </div>
+          <p class="testimonial-text">"Turnkey service at its best. Being out of town, I handed over my flat to them and they managed everything from civil work to final decor beautifully."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div><p class="name">Saurabh Mishra</p><p class="location">Kankarbagh</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 7. PROCESS & WHY CHOOSE US ═══════════════════ -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="process-grid">
+        <!-- Process Steps -->
+        <div>
+          <h2 class="section-label">How We Work</h2>
+          <h3 class="section-heading" style="margin-bottom:2.5rem;">Our 6-Step Process</h3>
+          <div class="process-steps" id="process-steps">
+            <div class="process-step">
+              <div class="process-step-indicator">
+                <div class="process-step-number">01</div>
+                <div class="process-step-line"></div>
+              </div>
+              <div class="process-step-content"><h4>Consultation</h4><p>We discuss your vision, budget, and timeline.</p></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-indicator">
+                <div class="process-step-number">02</div>
+                <div class="process-step-line"></div>
+              </div>
+              <div class="process-step-content"><h4>Design Planning</h4><p>Creating layouts and mood boards for your space.</p></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-indicator">
+                <div class="process-step-number">03</div>
+                <div class="process-step-line"></div>
+              </div>
+              <div class="process-step-content"><h4>3D Visualization</h4><p>Realistic 3D renders to finalize the look.</p></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-indicator">
+                <div class="process-step-number">04</div>
+                <div class="process-step-line"></div>
+              </div>
+              <div class="process-step-content"><h4>Material Selection</h4><p>Choosing premium finishes, fabrics, and furniture.</p></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-indicator">
+                <div class="process-step-number">05</div>
+                <div class="process-step-line"></div>
+              </div>
+              <div class="process-step-content"><h4>Execution</h4><p>Our expert craftsmen bring the design to life.</p></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-indicator">
+                <div class="process-step-number">06</div>
+              </div>
+              <div class="process-step-content"><h4>Handover</h4><p>Final walkthrough and handing over your dream space.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose">
+          <h3>Why Choose <span data-bind="businessName">7 Star Interior</span>?</h3>
+          <div class="why-grid" id="why-grid">
+            <div class="why-item">
+              <div class="why-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span>10+ Years Experience</span>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </div>
+              <span>500+ Happy Clients</span>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span>On-Time Delivery</span>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              </div>
+              <span>Premium Materials</span>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span>Custom Designs</span>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>Post-Project Support</span>
+            </div>
+          </div>
+          <div class="why-cta">
+            <div>
+              <p class="cta-title">Ready to start?</p>
+              <p class="cta-subtitle">Let's discuss your project today.</p>
+            </div>
+            <button class="btn btn-secondary btn-rounded" onclick="scrollToSection('contact')">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 8. PRICING ═══════════════════ -->
+  <section id="pricing" class="section bg-secondary-section">
+    <div class="container">
+      <div class="section-center">
+        <h2 class="section-label">Packages</h2>
+        <h3 class="section-heading-white">Transparent Pricing</h3>
+        <p class="section-subtext-white">Clear, competitive pricing tailored to different project scopes and requirements.</p>
+      </div>
+      <div class="pricing-grid" id="pricing-grid">
+        <!-- Basic -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h4 class="pricing-name">Basic Package</h4>
+            <div><span class="pricing-price">₹500</span><span class="pricing-unit">/sq.ft</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Space Planning &amp; Layout</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>2D Furniture Layout</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Basic False Ceiling Design</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Standard Lighting Plan</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Color Consultation</span></li>
+          </ul>
+          <div class="pricing-footer"><button class="btn btn-outline btn-full" onclick="scrollToSection('contact')">Choose Package</button></div>
+        </div>
+        <!-- Premium -->
+        <div class="pricing-card pricing-card-popular">
+          <div class="pricing-popular-badge">Most Popular</div>
+          <div class="pricing-header">
+            <h4 class="pricing-name">Premium Package</h4>
+            <div><span class="pricing-price">₹800</span><span class="pricing-unit">/sq.ft</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Everything in Basic</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>3D Visualization (2 Views/Room)</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Custom Furniture Design</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Premium Material Selection</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Detailed Working Drawings</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Dedicated Site Supervisor</span></li>
+          </ul>
+          <div class="pricing-footer"><button class="btn btn-primary btn-full" onclick="scrollToSection('contact')">Choose Package</button></div>
+        </div>
+        <!-- Turnkey -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h4 class="pricing-name">Turnkey Package</h4>
+            <div><span class="pricing-price">₹1200</span><span class="pricing-unit">/sq.ft</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Everything in Premium</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Complete Execution</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Civil Work &amp; Plumbing</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>End-to-end Procurement</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Smart Home Integration</span></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg><span>Post-Handover Warranty</span></li>
+          </ul>
+          <div class="pricing-footer"><button class="btn btn-outline btn-full" onclick="scrollToSection('contact')">Choose Package</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 9. BLOG ═══════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="portfolio-header">
+        <div>
+          <h2 class="section-label">Design Ideas</h2>
+          <h3 class="section-heading" style="margin-bottom:0;">Latest Insights</h3>
+        </div>
+      </div>
+      <div class="blog-grid" id="blog-grid">
+        <div class="blog-card">
+          <div class="blog-card-image"><img src="assets/images/blog/blog-1.jpg" alt="5 Space-Saving Ideas for Small Homes" /></div>
+          <p class="blog-date">Oct 12, 2023</p>
+          <h4>5 Space-Saving Ideas for Small Homes</h4>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-image"><img src="assets/images/blog/blog-2.jpg" alt="Modular Kitchen Trends 2025" /></div>
+          <p class="blog-date">Oct 28, 2023</p>
+          <h4>Modular Kitchen Trends 2025</h4>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-image"><img src="assets/images/blog/blog-3.jpg" alt="How to Choose the Right Interior Style" /></div>
+          <p class="blog-date">Nov 05, 2023</p>
+          <h4>How to Choose the Right Interior Style</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 10. CONTACT ═══════════════════ -->
+  <section id="contact" class="section bg-muted-light">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2 class="section-label">Get In Touch</h2>
+          <h3 class="section-heading">Let's Build Your Dream Space</h3>
+          <p class="section-subtext" style="margin-bottom:2rem;">Fill out the form and our design experts will get back to you within 24 hours to schedule your free consultation.</p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="icon-circle icon-circle-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Our Studio</h4>
+                <p id="contact-address">372, SMT LALMUNI DEVI, RAJDEO SINGH, Devi Asthan Rd, Jaganpura, EAST R, K NAGAR, Patna, Bihar 800027</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon-circle icon-circle-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h4>Call Us</h4>
+                <p id="contact-phone">+919297766777</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="icon-circle icon-circle-whatsapp">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <h4>WhatsApp</h4>
+                <p id="contact-whatsapp">+919297766777</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <div class="card-header"><h3>Book Free Consultation</h3></div>
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" required placeholder="Enter your name" class="form-input" id="form-name" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" required placeholder="Your phone number" class="form-input" id="form-phone" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">City/Location</label>
+                <input type="text" required placeholder="E.g., Kankarbagh" class="form-input" id="form-city" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Project Type</label>
+              <select class="form-select" id="form-project-type" required>
+                <option value="" disabled selected>Select project type</option>
+                <option value="residential">Residential Interior</option>
+                <option value="kitchen">Modular Kitchen</option>
+                <option value="office">Office Interior</option>
+                <option value="renovation">Renovation</option>
+                <option value="turnkey">Turnkey Project</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Project Details</label>
+              <textarea placeholder="Tell us a bit about your space and requirements..." class="form-textarea" id="form-details"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" style="height:3rem;font-size:1rem;margin-top:0.5rem;">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ 11. FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:1.5rem;">
+            <div class="logo-icon" style="width:2rem;height:2rem;font-size:0.875rem;" data-bind="businessShortName">7*</div>
+            <span class="logo-text" style="color:white;text-shadow:none;" data-bind="businessName">7 Star Interior</span>
+          </div>
+          <p id="footer-description">Premium interior design studio in Patna delivering luxury, comfort, and functionality to residential and commercial spaces.</p>
+          <div class="footer-social" id="footer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><button onclick="scrollToSection('home')">Home</button></li>
+            <li><button onclick="scrollToSection('about')">About Us</button></li>
+            <li><button onclick="scrollToSection('services')">Services</button></li>
+            <li><button onclick="scrollToSection('portfolio')">Portfolio</button></li>
+            <li><button onclick="scrollToSection('pricing')">Pricing</button></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links" id="footer-services">
+            <li>Residential Interior</li>
+            <li>Modular Kitchen</li>
+            <li>Office Interior</li>
+            <li>Turnkey Projects</li>
+            <li>3D Visualization</li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4>Contact Us</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span id="footer-address">372, SMT LALMUNI DEVI, RAJDEO SINGH, Devi Asthan Rd, Jaganpura, EAST R, K NAGAR, Patna, Bihar 800027</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span id="footer-phone">+919297766777</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span id="footer-email">info@7starinterior.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> <span data-bind="businessName">7 Star Interior</span>. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
 </html>

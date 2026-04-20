@@ -1,0 +1,199 @@
+{
+  "businessName": "7 Star Interior",
+  "businessShortName": "7*",
+  "tagline": "Design That Elevates Your Lifestyle.",
+  "heroSubtitle": "Transforming residential and commercial spaces into stunning, functional masterpieces. Experience luxury living with 7 Star Interior.",
+  "heroBadge": "Patna's Premium Interior Studio",
+  "city": "Patna",
+  "state": "Bihar",
+  "phone": "+919297766777",
+  "whatsapp": "919297766777",
+  "email": "info@7starinterior.com",
+  "address": "372, SMT LALMUNI DEVI, RAJDEO SINGH, Devi Asthan Rd, Jaganpura, EAST R, K NAGAR, Patna, Bihar 800027",
+  "whatsappMessage": "Hi 7 Star Interior, I would like to discuss a project.",
+
+  "stats": {
+    "yearsExperience": "10+",
+    "projectsDelivered": "500+"
+  },
+
+  "about": {
+    "sectionLabel": "About 7 Star Interior",
+    "heading": "Crafting Spaces With Soul & Purpose",
+    "paragraph1": "Based in the heart of Patna, 7 Star Interior is a premier design studio dedicated to transforming ordinary spaces into extraordinary environments. With over a decade of excellence, we bring your vision to life with uncompromising quality.",
+    "paragraph2": "Our philosophy is simple: exceptional design should be both breathtakingly beautiful and perfectly functional. From conceptualization to the final reveal, our expert team manages every detail, ensuring a seamless journey to your dream space.",
+    "highlights": [
+      "Unmatched attention to detail and craftsmanship",
+      "Transparent pricing with no hidden costs",
+      "Dedicated project manager for every client",
+      "Use of premium, durable materials"
+    ]
+  },
+
+  "services": [
+    {
+      "title": "Residential Interior",
+      "description": "Complete home interiors that reflect your personal style and enhance comfort.",
+      "image": "assets/images/services/service-residential.png"
+    },
+    {
+      "title": "Modular Kitchen",
+      "description": "Smart, ergonomic, and stylish kitchen designs that make cooking a joy.",
+      "image": "assets/images/services/service-kitchen.png"
+    },
+    {
+      "title": "Office Interior",
+      "description": "Inspiring workspaces designed to boost productivity and reflect your brand.",
+      "image": "assets/images/services/service-office.png"
+    },
+    {
+      "title": "Home Renovation",
+      "description": "Breathe new life into your existing spaces with our expert remodeling.",
+      "image": "assets/images/services/service-renovation.png"
+    },
+    {
+      "title": "Turnkey Projects",
+      "description": "End-to-end execution. You hand us the keys, we hand you a finished home.",
+      "image": "assets/images/services/service-turnkey.png"
+    },
+    {
+      "title": "3D Visualization",
+      "description": "See your space before it's built with our highly realistic 3D renderings.",
+      "image": "assets/images/services/service-3d.png"
+    }
+  ],
+
+  "portfolio": [
+    { "title": "Luxury Villa, Kankarbagh", "category": "Residential", "image": "assets/images/portfolio/portfolio-1.png" },
+    { "title": "Master Bedroom", "category": "Bedroom", "image": "assets/images/portfolio/portfolio-2.png" },
+    { "title": "Premium Modular Kitchen", "category": "Kitchen", "image": "assets/images/portfolio/portfolio-3.png" },
+    { "title": "Corporate Workspace", "category": "Office", "image": "assets/images/portfolio/portfolio-4.jpg" },
+    { "title": "Elegant Dining Area", "category": "Dining", "image": "assets/images/portfolio/portfolio-5.jpg" }
+  ],
+
+  "beforeAfter": [
+    {
+      "title": "Living Room Transformation",
+      "before": "assets/images/before-after/before-1.jpg",
+      "after": "assets/images/before-after/after-1.jpg"
+    },
+    {
+      "title": "Kitchen Remodel",
+      "before": "assets/images/before-after/before-2.jpg",
+      "after": "assets/images/before-after/after-2.jpg"
+    }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Rajesh Kumar",
+      "location": "Boring Road",
+      "text": "7 Star Interior completely transformed our 3BHK. Their attention to detail and adherence to timeline was impressive. The modular kitchen is the highlight of our home."
+    },
+    {
+      "name": "Anjali Singh",
+      "location": "Patliputra Colony",
+      "text": "Very professional team. They understood my vision for a modern minimalist living room and executed it perfectly. Highly recommend their services in Patna."
+    },
+    {
+      "name": "Vikash Sharma",
+      "location": "Bailey Road",
+      "text": "We hired them for our office interior. The space utilization and aesthetic appeal they achieved within our budget was beyond our expectations."
+    },
+    {
+      "name": "Neha Gupta",
+      "location": "Danapur",
+      "text": "The 3D visualization helped us understand the design before execution. The final result looks exactly like the render! Excellent craftsmanship."
+    },
+    {
+      "name": "Saurabh Mishra",
+      "location": "Kankarbagh",
+      "text": "Turnkey service at its best. Being out of town, I handed over my flat to them and they managed everything from civil work to final decor beautifully."
+    }
+  ],
+
+  "process": [
+    { "step": "01", "title": "Consultation", "description": "We discuss your vision, budget, and timeline." },
+    { "step": "02", "title": "Design Planning", "description": "Creating layouts and mood boards for your space." },
+    { "step": "03", "title": "3D Visualization", "description": "Realistic 3D renders to finalize the look." },
+    { "step": "04", "title": "Material Selection", "description": "Choosing premium finishes, fabrics, and furniture." },
+    { "step": "05", "title": "Execution", "description": "Our expert craftsmen bring the design to life." },
+    { "step": "06", "title": "Handover", "description": "Final walkthrough and handing over your dream space." }
+  ],
+
+  "whyChooseUs": [
+    "10+ Years Experience",
+    "500+ Happy Clients",
+    "On-Time Delivery",
+    "Premium Materials",
+    "Custom Designs",
+    "Post-Project Support"
+  ],
+
+  "pricing": [
+    {
+      "name": "Basic Package",
+      "price": "₹500",
+      "unit": "/sq.ft",
+      "popular": false,
+      "features": [
+        "Space Planning & Layout",
+        "2D Furniture Layout",
+        "Basic False Ceiling Design",
+        "Standard Lighting Plan",
+        "Color Consultation"
+      ]
+    },
+    {
+      "name": "Premium Package",
+      "price": "₹800",
+      "unit": "/sq.ft",
+      "popular": true,
+      "features": [
+        "Everything in Basic",
+        "3D Visualization (2 Views/Room)",
+        "Custom Furniture Design",
+        "Premium Material Selection",
+        "Detailed Working Drawings",
+        "Dedicated Site Supervisor"
+      ]
+    },
+    {
+      "name": "Turnkey Package",
+      "price": "₹1200",
+      "unit": "/sq.ft",
+      "popular": false,
+      "features": [
+        "Everything in Premium",
+        "Complete Execution",
+        "Civil Work & Plumbing",
+        "End-to-end Procurement",
+        "Smart Home Integration",
+        "Post-Handover Warranty"
+      ]
+    }
+  ],
+
+  "blog": [
+    { "title": "5 Space-Saving Ideas for Small Homes", "date": "Oct 12, 2023", "image": "assets/images/blog/blog-1.jpg" },
+    { "title": "Modular Kitchen Trends 2025", "date": "Oct 28, 2023", "image": "assets/images/blog/blog-2.jpg" },
+    { "title": "How to Choose the Right Interior Style", "date": "Nov 05, 2023", "image": "assets/images/blog/blog-3.jpg" }
+  ],
+
+  "socialMedia": {
+    "instagram": "#",
+    "facebook": "#",
+    "youtube": "#",
+    "pinterest": "#"
+  },
+
+  "footerDescription": "Premium interior design studio in Patna delivering luxury, comfort, and functionality to residential and commercial spaces.",
+
+  "projectTypes": [
+    "Residential Interior",
+    "Modular Kitchen",
+    "Office Interior",
+    "Renovation",
+    "Turnkey Project"
+  ]
+}
